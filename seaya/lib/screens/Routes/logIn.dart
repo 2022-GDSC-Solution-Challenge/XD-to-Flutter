@@ -42,7 +42,7 @@ class LogInState extends State<LogIn> {
                   Text("LOG IN",
                       style: TextStyle(
                           color: Color(0xff02171a),
-                          fontFamily: 'PSLOrnanongPro"',
+                          fontFamily: 'PTSansRegular"',
                           fontSize: 15.0),
                       textAlign: TextAlign.left),
                 ],
