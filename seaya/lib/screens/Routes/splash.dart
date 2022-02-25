@@ -35,16 +35,16 @@ class splash extends State<Splash> {
               height: 330.0,
             ),
             Image(
-              width: 95.0,
+              width: 90.0,
               image: AssetImage(
-                'images/logo.png',
+                'images/seaya_logo.png',
               ),
             ),
             SizedBox(
-              height: 7.0,
+              height: 12.0,
             ),
             Text(
-              'Seaya',
+              'SeaYa',
               style: TextStyle(
                 fontSize: 17,
                 color: Colors.black,
@@ -53,7 +53,7 @@ class splash extends State<Splash> {
               ),
             ),
             SizedBox(
-              height: 10.0,
+              height: 8.0,
             ),
             Text(
               'view to the sea',

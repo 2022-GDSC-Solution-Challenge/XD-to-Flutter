@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seaya/screens/Routes/splash.dart';
+import 'package:seaya/screens/Tabs/Sea.dart';
 
 void main() {
   runApp(const MyApp());

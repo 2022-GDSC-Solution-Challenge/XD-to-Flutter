@@ -31,9 +31,9 @@ class LogInState extends State<LogIn> {
                     width: 12.0,
                   ),
                   Image(
-                    width: 55.0,
+                    width: 54.0,
                     image: AssetImage(
-                      'images/logo.png',
+                      'images/seaya_logo.png',
                     ),
                   ),
                   SizedBox(

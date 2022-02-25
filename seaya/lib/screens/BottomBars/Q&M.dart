@@ -42,9 +42,9 @@ class _QuizMissionState extends State<QuizMission>
                       width: 10.0,
                     ),
                     const Image(
-                      width: 56.0,
+                      width: 53.0,
                       image: AssetImage(
-                        'images/logo.png',
+                        'images/seaya_logo.png',
                       ),
                     ),
                     const SizedBox(
@@ -55,7 +55,7 @@ class _QuizMissionState extends State<QuizMission>
                             color: Color(0xff02171a),
                             fontFamily: 'PTSansRegular',
                             letterSpacing: 2.5,
-                            fontSize: 14.0),
+                            fontSize: 15.0),
                         textAlign: TextAlign.left),
                     const SizedBox(
                       width: 180.0,

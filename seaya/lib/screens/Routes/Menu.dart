@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seaya/screens/Routes/Navigation.dart';
+import 'package:seaya/screens/Routes/logIn.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
@@ -27,9 +28,9 @@ class _MenuState extends State<Menu> with TickerProviderStateMixin {
                       width: 10.0,
                     ),
                     const Image(
-                      width: 56.0,
+                      width: 53.0,
                       image: AssetImage(
-                        'images/logo.png',
+                        'images/seaya_logo.png',
                       ),
                     ),
                     const SizedBox(
@@ -40,20 +41,21 @@ class _MenuState extends State<Menu> with TickerProviderStateMixin {
                             color: Color(0xff02171a),
                             fontFamily: 'PTSansRegular',
                             letterSpacing: 2.5,
-                            fontSize: 14.0),
+                            fontSize: 15.0),
                         textAlign: TextAlign.left),
                     const SizedBox(
                       width: 180.0,
                     ),
                     IconButton(
                         icon: const Icon(
-                          Icons.menu,
-                          size: 26,
+                          Icons.logout_outlined,
+                          size: 24,
                         ),
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Menu()),
+                            MaterialPageRoute(
+                                builder: (context) => Navigation()),
                           );
                         }),
                   ],
@@ -152,13 +154,11 @@ class _MenuState extends State<Menu> with TickerProviderStateMixin {
                       ),
                       onPressed: () {
                         setState(() {
-                          /*
-                                  Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(
-                                      builder: (context) => BasicPage(),
-                                    ),
-                                  );
-                                  */
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => LogIn(),
+                            ),
+                          );
                         });
                       },
                     ),
@@ -168,18 +168,6 @@ class _MenuState extends State<Menu> with TickerProviderStateMixin {
               const SizedBox(
                 height: 10,
               ),
-              IconButton(
-                  icon: const Icon(
-                    Icons.logout_outlined,
-                    size: 22,
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Navigation()),
-                    );
-                  }),
             ],
           ),
         ),

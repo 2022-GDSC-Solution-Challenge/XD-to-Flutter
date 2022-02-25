@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seaya/screens/Routes/Menu.dart';
 import 'package:seaya/screens/Routes/login.dart';
+import 'package:seaya/screens/Tabs/Sea.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -12,6 +13,12 @@ class Home extends StatefulWidget {
 // ignore: camel_case_types
 class HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late TabController _tabController;
+
+  final List<Widget> _widgetOptions = <Widget>[
+    Sea(),
+    Sea(),
+    Sea(),
+  ];
 
   @override
   void initState() {
@@ -43,9 +50,9 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         width: 10,
                       ),
                       const Image(
-                        width: 56.0,
+                        width: 53.0,
                         image: AssetImage(
-                          'images/logo.png',
+                          'images/seaya_logo.png',
                         ),
                       ),
                       const SizedBox(
@@ -56,7 +63,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                               color: Color(0xff02171a),
                               fontFamily: 'PTSansRegular',
                               letterSpacing: 2.5,
-                              fontSize: 14.0),
+                              fontSize: 15.0),
                           textAlign: TextAlign.left),
                       const SizedBox(
                         width: 180.0,
@@ -116,10 +123,10 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   unselectedLabelColor: const Color(0xff575757),
                   tabs: const [
                     Tab(
-                      text: 'News',
+                      text: 'Sea',
                     ),
                     Tab(
-                      text: 'Sea',
+                      text: 'News',
                     ),
                     Tab(
                       text: 'Campaign',
@@ -133,7 +140,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   children: const [
                     Center(
                       child: Text(
-                        'News',
+                        'Sea',
                         style: TextStyle(
                           fontSize: 25,
                           fontFamily: 'PTSansRegular',
@@ -142,7 +149,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     ),
                     Center(
                       child: Text(
-                        'Sea',
+                        'News',
                         style: TextStyle(
                           fontSize: 25,
                           fontFamily: 'PTSansRegular',
