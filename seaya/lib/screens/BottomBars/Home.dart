@@ -135,6 +135,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 child: TabBarView(
                   controller: _tabController,
                   children: [
+                    //메인화면 탭
                     Center(
                       child: Text(
                         'Sea',
@@ -144,6 +145,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         ),
                       ),
                     ),
+                    //뉴스 탭
                     Center(
                       child: Expanded(
                         child: ListView(
@@ -428,15 +430,161 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         ),
                       ),
                     ),
+                    //캠페인 탭
                     Center(
-                      child: Text(
-                        'Campaign',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontFamily: 'PTSansRegular',
+                        child: GridView.count(
+                      primary: false,
+                      padding: const EdgeInsets.only(top: 10),
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                      crossAxisCount: 2,
+                      children: <Widget>[
+                        Positioned(
+                          top: 10,
+                          child: Card(
+                            elevation: 8.0,
+                            shadowColor: Colors.grey.withOpacity(0.4),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  image: const DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage(""),
+                                  ),
+                                ),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 241, 241, 241),
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  margin: const EdgeInsets.only(
+                                    top: 125,
+                                  ),
+                                  padding:
+                                      const EdgeInsets.only(top: 10, left: 20),
+                                  child: Text(
+                                    "Title",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: const Color(0xff575757),
+                                        fontFamily: 'PTSansRegular'),
+                                  ),
+                                )),
+                          ),
                         ),
-                      ),
-                    ),
+                        Positioned(
+                          top: 10,
+                          child: Card(
+                            elevation: 8.0,
+                            shadowColor: Colors.grey.withOpacity(0.4),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  image: const DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage(""),
+                                  ),
+                                ),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 241, 241, 241),
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  margin: const EdgeInsets.only(
+                                    top: 125,
+                                  ),
+                                  padding:
+                                      const EdgeInsets.only(top: 10, left: 20),
+                                  child: Text(
+                                    "Title",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: const Color(0xff575757),
+                                        fontFamily: 'PTSansRegular'),
+                                  ),
+                                )),
+                          ),
+                        ),
+                        Positioned(
+                          top: 10,
+                          child: Card(
+                            elevation: 8.0,
+                            shadowColor: Colors.grey.withOpacity(0.4),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  image: const DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage(""),
+                                  ),
+                                ),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 241, 241, 241),
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  margin: const EdgeInsets.only(
+                                    top: 125,
+                                  ),
+                                  padding:
+                                      const EdgeInsets.only(top: 10, left: 20),
+                                  child: Text(
+                                    "Title",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: const Color(0xff575757),
+                                        fontFamily: 'PTSansRegular'),
+                                  ),
+                                )),
+                          ),
+                        ),
+                        Positioned(
+                          top: 10,
+                          child: Card(
+                            elevation: 8.0,
+                            shadowColor: Colors.grey.withOpacity(0.4),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  image: const DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage(""),
+                                  ),
+                                ),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 241, 241, 241),
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  margin: const EdgeInsets.only(
+                                    top: 125,
+                                  ),
+                                  padding:
+                                      const EdgeInsets.only(top: 10, left: 20),
+                                  child: Text(
+                                    "Title",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: const Color(0xff575757),
+                                        fontFamily: 'PTSansRegular'),
+                                  ),
+                                )),
+                          ),
+                        ),
+                      ],
+                    )),
                   ],
                 ),
               ),

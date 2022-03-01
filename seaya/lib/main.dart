@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seaya/screens/Routes/Navigation.dart';
 import 'package:seaya/screens/Routes/splash.dart';
+import 'package:seaya/screens/Tabs/Campaign.dart';
 import 'package:seaya/screens/Tabs/News.dart';
 import 'package:seaya/screens/Tabs/Sea.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: Navigation(),
+      home: Splash(),
     );
   }
 }
