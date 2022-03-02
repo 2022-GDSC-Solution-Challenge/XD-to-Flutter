@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:seaya/screens/Routes/Navigation.dart';
 import 'package:seaya/screens/Routes/splash.dart';
 import 'package:seaya/screens/Tabs/Campaign.dart';
+import 'package:seaya/screens/Tabs/FriendsList.dart';
 import 'package:seaya/screens/Tabs/News.dart';
 import 'package:seaya/screens/Tabs/Quiz.dart';
 import 'package:seaya/screens/Tabs/Sea.dart';
