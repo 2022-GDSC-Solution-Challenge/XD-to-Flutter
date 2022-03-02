@@ -3,6 +3,7 @@ import 'package:seaya/screens/Routes/Navigation.dart';
 import 'package:seaya/screens/Routes/splash.dart';
 import 'package:seaya/screens/Tabs/Campaign.dart';
 import 'package:seaya/screens/Tabs/News.dart';
+import 'package:seaya/screens/Tabs/Quiz.dart';
 import 'package:seaya/screens/Tabs/Sea.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: Navigation(),
     );
   }
 }
