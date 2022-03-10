@@ -137,12 +137,283 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   children: [
                     //메인화면 탭
                     Center(
-                      child: Text(
-                        'Sea',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontFamily: 'PTSansRegular',
-                        ),
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            top: 10,
+                            left: 2.5,
+                            child: Card(
+                              elevation: 5.0,
+                              shadowColor: Colors.grey.withOpacity(0.4),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              child: Container(
+                                height: 540,
+                                width: 340,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 25,
+                            left: 22.5,
+                            child: Card(
+                              elevation: 3.0,
+                              shadowColor: Colors.grey.withOpacity(0.4),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                              child: Container(
+                                height: 45,
+                                width: 300,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                child: Container(
+                                  padding:
+                                      const EdgeInsets.only(left: 20, top: 3),
+                                  child: Row(children: [
+                                    //사용자 이름
+                                    Text(
+                                      "YoonJin",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                          fontFamily: 'PTSansRegular'),
+                                    ),
+                                    SizedBox(
+                                      width: 160,
+                                    ),
+                                    //상위 몇 퍼센트 인지
+                                    Text(
+                                      "Top 30%",
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                          fontFamily: 'PTSansRegular'),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ),
+                          ),
+                          //기여도 -> 총 점수 10점 당 0.2%씩 증가 (ex. 총점수 72, 기여도 1.4%)
+                          Positioned(
+                            top: 29,
+                            left: 32,
+                            child: Container(
+                              padding: const EdgeInsets.only(left: 60, top: 70),
+                              child: Column(children: [
+                                Text(
+                                  "1.4 %",
+                                  style: TextStyle(
+                                      fontSize: 32,
+                                      color: Color(0xff0068C1),
+                                      fontFamily: 'PTSansRegular'),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Text(
+                                  " the view of the sea \n has been expanded.",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      letterSpacing: 1.0,
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      fontFamily: 'PTSansRegular'),
+                                ),
+                              ]),
+                            ),
+                          ),
+                          //메인 배경 이미지
+                          Stack(
+                            children: [
+                              Positioned(
+                                  top: 202,
+                                  left: 50,
+                                  child: Container(
+                                    child: Image(
+                                      width: 240.0,
+                                      image: AssetImage(
+                                        'images/circle.png',
+                                      ),
+                                    ),
+                                  )),
+                              //북극곰 이미지
+                              Positioned(
+                                  top: 261,
+                                  left: 113,
+                                  child: Container(
+                                    child: Image(
+                                      width: 115.0,
+                                      image: AssetImage(
+                                        'images/mainImage.png',
+                                      ),
+                                    ),
+                                  )),
+                              Positioned(
+                                top: 234,
+                                left: 55,
+                                child: Container(
+                                  padding: const EdgeInsets.only(top: 100),
+                                  width: 70.0,
+                                  height: 70.0,
+                                  decoration: new BoxDecoration(
+                                    color: Color.fromARGB(255, 118, 200, 241),
+                                    shape: BoxShape.circle,
+                                  ),
+                                ),
+                              ),
+                              // 총 점수
+                              Positioned(
+                                top: 243,
+                                left: 72.5,
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "Total",
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          color: Color.fromARGB(
+                                              255, 255, 255, 255),
+                                          fontFamily: 'PTSansRegular'),
+                                    ),
+                                    Text(
+                                      "72",
+                                      style: TextStyle(
+                                          fontSize: 32,
+                                          color: Color.fromARGB(
+                                              255, 255, 255, 255),
+                                          fontFamily: 'PTSansRegular'),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          Positioned(
+                            top: 460,
+                            left: 22.5,
+                            child: Card(
+                              elevation: 3.0,
+                              shadowColor: Colors.grey.withOpacity(0.4),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              child: Container(
+                                height: 75,
+                                width: 300,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                child: Container(
+                                  padding:
+                                      const EdgeInsets.only(left: 28, top: 3),
+                                  child: Row(children: [
+                                    //퀴즈 점수
+                                    Container(
+                                      padding: const EdgeInsets.only(top: 12),
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            "Quiz",
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Color.fromARGB(
+                                                    255, 0, 0, 0),
+                                                fontFamily: 'PTSansRegular'),
+                                          ),
+                                          Text(
+                                            "12",
+                                            style: TextStyle(
+                                                fontSize: 28,
+                                                color: Color.fromARGB(
+                                                    255, 0, 0, 0),
+                                                fontFamily: 'PTSansRegular'),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 24.5,
+                                    ),
+                                    Container(
+                                      width: 1,
+                                      height: 35,
+                                      color: Colors.black,
+                                    ),
+                                    SizedBox(
+                                      width: 24.5,
+                                    ),
+                                    //뉴스&켐페인 점수
+                                    Container(
+                                      padding: const EdgeInsets.only(top: 12),
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            "News / Campaign",
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Color.fromARGB(
+                                                    255, 0, 0, 0),
+                                                fontFamily: 'PTSansRegular'),
+                                          ),
+                                          Text(
+                                            "27",
+                                            style: TextStyle(
+                                                fontSize: 28,
+                                                color: Color.fromARGB(
+                                                    255, 0, 0, 0),
+                                                fontFamily: 'PTSansRegular'),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 24.5,
+                                    ),
+                                    Container(
+                                      width: 1,
+                                      height: 35,
+                                      color: Colors.black,
+                                    ),
+                                    SizedBox(
+                                      width: 24.5,
+                                    ),
+                                    //미션 점수
+                                    Container(
+                                      padding: const EdgeInsets.only(top: 12),
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            "Mission",
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Color.fromARGB(
+                                                    255, 0, 0, 0),
+                                                fontFamily: 'PTSansRegular'),
+                                          ),
+                                          Text(
+                                            "33",
+                                            style: TextStyle(
+                                                fontSize: 28,
+                                                color: Color.fromARGB(
+                                                    255, 0, 0, 0),
+                                                fontFamily: 'PTSansRegular'),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ]),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     //뉴스 탭
