@@ -420,282 +420,353 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     Center(
                       child: Expanded(
                         child: ListView(
-                          padding: const EdgeInsets.all(0.0),
                           children: [
-                            SizedBox(height: 10),
                             Container(
-                              height: 205,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                      top: 35,
-                                      child: Material(
-                                        child: Container(
-                                          height: 160.0,
-                                          width: width * 0.91,
-                                          decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius:
-                                                  BorderRadius.circular(0.0),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                    color: Colors.grey
-                                                        .withOpacity(0.3),
-                                                    offset:
-                                                        const Offset(-1.0, 1.0),
-                                                    blurRadius: 10.0,
-                                                    spreadRadius: 1.0),
-                                              ]),
-                                        ),
-                                      )),
-                                  Positioned(
-                                    top: 0,
-                                    left: 10,
-                                    child: Card(
-                                      elevation: 10.0,
-                                      shadowColor: Colors.grey.withOpacity(0.5),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
+                              margin:
+                                  const EdgeInsets.only(bottom: 10, top: 25),
+                              height: 130,
+                              padding: const EdgeInsets.only(
+                                  left: 16, right: 16, bottom: 0),
+                              child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Color.fromARGB(255, 67, 101, 175),
+                                      borderRadius: const BorderRadius.only(
+                                        bottomLeft: Radius.circular(65.0),
+                                        topRight: Radius.circular(10),
                                       ),
-                                      child: Container(
-                                        height: 180,
-                                        width: 130,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                          image: const DecorationImage(
-                                            fit: BoxFit.fill,
-                                            image: AssetImage(""),
-                                          ),
-                                        ),
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topRight,
+                                        end: Alignment.bottomLeft,
+                                        colors: [
+                                          Color.fromARGB(255, 85, 150, 194),
+                                          Color.fromARGB(255, 43, 145, 204),
+                                        ],
                                       ),
-                                    ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Color.fromARGB(
+                                                    255, 124, 130, 180)
+                                                .withOpacity(0.3),
+                                            offset: Offset(-8.0, 8.0),
+                                            blurRadius: 8.0,
+                                            spreadRadius: 4.0)
+                                      ]),
+                                  padding: const EdgeInsets.only(
+                                    left: 25,
+                                    top: 20.0,
+                                    bottom: 0,
                                   ),
-                                  Positioned(
-                                      top: 50,
-                                      left: 160,
-                                      child: Container(
-                                        height: 150,
-                                        width: 180,
-                                        child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: const [
-                                              Text(
-                                                "Title",
-                                                style: TextStyle(
-                                                    fontSize: 18,
-                                                    color: Color.fromARGB(
-                                                        255, 37, 83, 182),
-                                                    fontFamily: 'PTSansBold'),
-                                              ),
-                                              Text(
-                                                "Date, Name",
-                                                style: TextStyle(
-                                                    fontSize: 10,
-                                                    color: Colors.grey,
-                                                    fontFamily:
-                                                        'PTSansRegular'),
-                                              ),
-                                              Divider(
-                                                color: Colors.black,
-                                              ),
-                                              Text(
-                                                "content of the article",
-                                                style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Color.fromARGB(
-                                                        255, 68, 68, 68),
-                                                    fontFamily: 'PTSansBold'),
-                                              ),
-                                            ]),
-                                      ))
-                                ],
-                              ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "Date",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Container(
+                                            width: 1.5,
+                                            height: 11,
+                                            color: Colors.white,
+                                          ),
+                                          SizedBox(
+                                            width: 11.5,
+                                          ),
+                                          Text(
+                                            "Publisher",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        padding: const EdgeInsets.only(
+                                            left: 10, top: 5, right: 20),
+                                        child: Column(children: [
+                                          Text(
+                                            "Title ...",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 22,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          )
+                                        ]),
+                                      )
+                                    ],
+                                  )),
                             ),
                             Container(
-                              height: 205,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                      top: 35,
-                                      child: Material(
-                                        child: Container(
-                                          height: 160.0,
-                                          width: width * 0.91,
-                                          decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius:
-                                                  BorderRadius.circular(0.0),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                    color: Colors.grey
-                                                        .withOpacity(0.3),
-                                                    offset:
-                                                        const Offset(-1.0, 1.0),
-                                                    blurRadius: 10.0,
-                                                    spreadRadius: 1.0),
-                                              ]),
-                                        ),
-                                      )),
-                                  Positioned(
-                                    top: 0,
-                                    left: 10,
-                                    child: Card(
-                                      elevation: 10.0,
-                                      shadowColor: Colors.grey.withOpacity(0.5),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
+                              margin:
+                                  const EdgeInsets.only(bottom: 10, top: 10),
+                              height: 130,
+                              padding: const EdgeInsets.only(
+                                  left: 16, right: 16, bottom: 0),
+                              child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Color.fromARGB(255, 86, 106, 150),
+                                      borderRadius: const BorderRadius.only(
+                                        bottomLeft: Radius.circular(10.0),
+                                        topRight: Radius.circular(65.0),
                                       ),
-                                      child: Container(
-                                        height: 180,
-                                        width: 130,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                          image: const DecorationImage(
-                                            fit: BoxFit.fill,
-                                            image: AssetImage(""),
-                                          ),
-                                        ),
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topRight,
+                                        end: Alignment.bottomLeft,
+                                        colors: [
+                                          Color.fromARGB(255, 87, 124, 206),
+                                          Color.fromARGB(255, 90, 133, 190),
+                                        ],
                                       ),
-                                    ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Color.fromARGB(
+                                                    255, 124, 130, 180)
+                                                .withOpacity(0.3),
+                                            offset: Offset(-8.0, 8.0),
+                                            blurRadius: 8.0,
+                                            spreadRadius: 4.0)
+                                      ]),
+                                  padding: const EdgeInsets.only(
+                                    left: 25,
+                                    top: 20.0,
+                                    bottom: 0,
                                   ),
-                                  Positioned(
-                                      top: 50,
-                                      left: 160,
-                                      child: Container(
-                                        height: 150,
-                                        width: 180,
-                                        child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: const [
-                                              Text(
-                                                "Title",
-                                                style: TextStyle(
-                                                    fontSize: 18,
-                                                    color: Color.fromARGB(
-                                                        255, 37, 83, 182),
-                                                    fontFamily: 'PTSansBold'),
-                                              ),
-                                              Text(
-                                                "Date, Name",
-                                                style: TextStyle(
-                                                    fontSize: 10,
-                                                    color: Colors.grey,
-                                                    fontFamily:
-                                                        'PTSansRegular'),
-                                              ),
-                                              Divider(
-                                                color: Colors.black,
-                                              ),
-                                              Text(
-                                                "content of the article",
-                                                style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Color.fromARGB(
-                                                        255, 68, 68, 68),
-                                                    fontFamily: 'PTSansBold'),
-                                              ),
-                                            ]),
-                                      ))
-                                ],
-                              ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "Date",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Container(
+                                            width: 1.5,
+                                            height: 11,
+                                            color: Colors.white,
+                                          ),
+                                          SizedBox(
+                                            width: 11.5,
+                                          ),
+                                          Text(
+                                            "Publisher",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        padding: const EdgeInsets.only(
+                                            left: 10, top: 5, right: 20),
+                                        child: Column(children: [
+                                          Text(
+                                            "Title ...",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 22,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          )
+                                        ]),
+                                      )
+                                    ],
+                                  )),
                             ),
                             Container(
-                              height: 205,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                      top: 35,
-                                      child: Material(
-                                        child: Container(
-                                          height: 160.0,
-                                          width: width * 0.91,
-                                          decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius:
-                                                  BorderRadius.circular(0.0),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                    color: Colors.grey
-                                                        .withOpacity(0.3),
-                                                    offset:
-                                                        const Offset(-1.0, 1.0),
-                                                    blurRadius: 10.0,
-                                                    spreadRadius: 1.0),
-                                              ]),
-                                        ),
-                                      )),
-                                  Positioned(
-                                    top: 0,
-                                    left: 10,
-                                    child: Card(
-                                      elevation: 10.0,
-                                      shadowColor: Colors.grey.withOpacity(0.5),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
+                              margin:
+                                  const EdgeInsets.only(bottom: 10, top: 10),
+                              height: 130,
+                              padding: const EdgeInsets.only(
+                                  left: 16, right: 16, bottom: 0),
+                              child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Color.fromARGB(255, 67, 101, 175),
+                                      borderRadius: const BorderRadius.only(
+                                        bottomLeft: Radius.circular(65.0),
+                                        topRight: Radius.circular(10),
                                       ),
-                                      child: Container(
-                                        height: 180,
-                                        width: 130,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                          image: const DecorationImage(
-                                            fit: BoxFit.fill,
-                                            image: AssetImage(""),
-                                          ),
-                                        ),
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topRight,
+                                        end: Alignment.bottomLeft,
+                                        colors: [
+                                          Color.fromARGB(255, 85, 150, 194),
+                                          Color.fromARGB(255, 43, 145, 204),
+                                        ],
                                       ),
-                                    ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Color.fromARGB(
+                                                    255, 124, 130, 180)
+                                                .withOpacity(0.3),
+                                            offset: Offset(-8.0, 8.0),
+                                            blurRadius: 8.0,
+                                            spreadRadius: 4.0)
+                                      ]),
+                                  padding: const EdgeInsets.only(
+                                    left: 25,
+                                    top: 20.0,
+                                    bottom: 0,
                                   ),
-                                  Positioned(
-                                      top: 50,
-                                      left: 160,
-                                      child: Container(
-                                        height: 150,
-                                        width: 180,
-                                        child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: const [
-                                              Text(
-                                                "Title",
-                                                style: TextStyle(
-                                                    fontSize: 18,
-                                                    color: Color.fromARGB(
-                                                        255, 37, 83, 182),
-                                                    fontFamily: 'PTSansBold'),
-                                              ),
-                                              Text(
-                                                "Date, Name",
-                                                style: TextStyle(
-                                                    fontSize: 10,
-                                                    color: Colors.grey,
-                                                    fontFamily:
-                                                        'PTSansRegular'),
-                                              ),
-                                              Divider(
-                                                color: Colors.black,
-                                              ),
-                                              Text(
-                                                "content of the article",
-                                                style: TextStyle(
-                                                  fontSize: 15,
-                                                  color: Color.fromARGB(
-                                                      255, 68, 68, 68),
-                                                  fontFamily: 'PTSansBold',
-                                                ),
-                                              ),
-                                            ]),
-                                      ))
-                                ],
-                              ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "Date",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Container(
+                                            width: 1.5,
+                                            height: 11,
+                                            color: Colors.white,
+                                          ),
+                                          SizedBox(
+                                            width: 11.5,
+                                          ),
+                                          Text(
+                                            "Publisher",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        padding: const EdgeInsets.only(
+                                            left: 10, top: 5, right: 20),
+                                        child: Column(children: [
+                                          Text(
+                                            "Title ...",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 22,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          )
+                                        ]),
+                                      )
+                                    ],
+                                  )),
+                            ),
+                            Container(
+                              margin:
+                                  const EdgeInsets.only(bottom: 10, top: 10),
+                              height: 130,
+                              padding: const EdgeInsets.only(
+                                  left: 16, right: 16, bottom: 0),
+                              child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Color.fromARGB(255, 86, 106, 150),
+                                      borderRadius: const BorderRadius.only(
+                                        topRight: Radius.circular(65.0),
+                                      ),
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topRight,
+                                        end: Alignment.bottomLeft,
+                                        colors: [
+                                          Color.fromARGB(255, 87, 124, 206),
+                                          Color.fromARGB(255, 90, 133, 190),
+                                        ],
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Color.fromARGB(
+                                                    255, 124, 130, 180)
+                                                .withOpacity(0.3),
+                                            offset: Offset(-8.0, 8.0),
+                                            blurRadius: 8.0,
+                                            spreadRadius: 4.0)
+                                      ]),
+                                  padding: const EdgeInsets.only(
+                                    left: 25,
+                                    top: 20.0,
+                                    bottom: 0,
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "Date",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Container(
+                                            width: 1.5,
+                                            height: 11,
+                                            color: Colors.white,
+                                          ),
+                                          SizedBox(
+                                            width: 11.5,
+                                          ),
+                                          Text(
+                                            "Publisher",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        padding: const EdgeInsets.only(
+                                            left: 10, top: 5, right: 20),
+                                        child: Column(children: [
+                                          Text(
+                                            "Title ...",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 22,
+                                              fontFamily: 'PTSansRegular',
+                                            ),
+                                          )
+                                        ]),
+                                      )
+                                    ],
+                                  )),
                             ),
                           ],
                         ),
