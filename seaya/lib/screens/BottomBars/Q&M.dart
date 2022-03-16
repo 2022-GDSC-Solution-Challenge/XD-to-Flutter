@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seaya/screens/Routes/Menu.dart';
+import 'package:seaya/screens/Routes/quizList.dart';
 
 class QuizMission extends StatefulWidget {
   const QuizMission({Key? key}) : super(key: key);
@@ -210,7 +211,15 @@ class _QuizMissionState extends State<QuizMission>
                                 backgroundColor:
                                     MaterialStateProperty.all<Color>(
                                         Color.fromARGB(255, 219, 231, 240))),
-                            onPressed: null,
+                            onPressed: () {
+                              setState(() {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => const quizList(),
+                                  ),
+                                );
+                              });
+                            },
                             child: const Text('Go!'),
                           ),
                         ],
