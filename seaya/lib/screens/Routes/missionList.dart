@@ -27,22 +27,12 @@ class _missionListState extends State<missionList>
                         children: [
                           Text.rich(
                             TextSpan(
-                              text: "Question 1",
+                              text: "Today Mission",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 22,
                                 fontFamily: 'PTSansRegular',
                               ),
-                              children: [
-                                TextSpan(
-                                  text: "/5",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontFamily: 'PTSansRegular',
-                                  ),
-                                )
-                              ],
                             ),
                           ),
                           Divider(
@@ -58,136 +48,251 @@ class _missionListState extends State<missionList>
                             height: 500,
                             decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 231, 240, 245),
-                                borderRadius: BorderRadius.circular((25))),
+                                borderRadius: BorderRadius.circular((15))),
                             child: Column(children: [
                               Text(
-                                "세계환경의 날은 언제일까요?",
+                                "Check completed missions",
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 16,
+                                  fontSize: 18,
                                   fontFamily: 'PTSansRegular',
                                 ),
                               ),
                               SizedBox(height: 12),
-                              Container(
-                                margin: EdgeInsets.only(top: 10),
-                                padding: EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.black26),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "1. Test",
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                          fontFamily: 'PTSansRegular',
-                                        ),
+                              Expanded(
+                                child: ListView(
+                                  padding: const EdgeInsets.all(0.0),
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(top: 7),
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        border:
+                                            Border.all(color: Colors.black26),
+                                        borderRadius: BorderRadius.circular(20),
                                       ),
-                                      Container(
-                                        height: 23,
-                                        width: 23,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(50),
-                                            border: Border.all(
-                                                color: Colors.black26)),
-                                      )
-                                    ]),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 10),
-                                padding: EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.black26),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "1. Test",
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                          fontFamily: 'PTSansRegular',
-                                        ),
+                                      child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "1. Test",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15,
+                                                fontFamily: 'PTSansRegular',
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 20,
+                                              height: 10,
+                                              child: Transform.scale(
+                                                scale: 1.2,
+                                                child: Checkbox(
+                                                    activeColor: Color.fromARGB(
+                                                        255, 61, 134, 194),
+                                                    shape: CircleBorder(),
+                                                    tristate: false,
+                                                    value: true,
+                                                    splashRadius: 30,
+                                                    onChanged: (Null) {}),
+                                              ),
+                                            ),
+                                          ]),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 7),
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        border:
+                                            Border.all(color: Colors.black26),
+                                        borderRadius: BorderRadius.circular(20),
                                       ),
-                                      Container(
-                                        height: 23,
-                                        width: 23,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(50),
-                                            border: Border.all(
-                                                color: Colors.black26)),
-                                      )
-                                    ]),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 10),
-                                padding: EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.black26),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "1. Test",
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                          fontFamily: 'PTSansRegular',
-                                        ),
+                                      child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "2. Test",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15,
+                                                fontFamily: 'PTSansRegular',
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 20,
+                                              height: 10,
+                                              child: Transform.scale(
+                                                scale: 1.2,
+                                                child: Checkbox(
+                                                    activeColor: Color.fromARGB(
+                                                        255, 61, 134, 194),
+                                                    shape: CircleBorder(),
+                                                    tristate: false,
+                                                    value: false,
+                                                    splashRadius: 30,
+                                                    onChanged: (Null) {}),
+                                              ),
+                                            ),
+                                          ]),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 7),
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        border:
+                                            Border.all(color: Colors.black26),
+                                        borderRadius: BorderRadius.circular(20),
                                       ),
-                                      Container(
-                                        height: 23,
-                                        width: 23,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(50),
-                                            border: Border.all(
-                                                color: Colors.black26)),
-                                      )
-                                    ]),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 10),
-                                padding: EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.black26),
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "1. Test",
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                          fontFamily: 'PTSansRegular',
-                                        ),
+                                      child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "3. Test",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15,
+                                                fontFamily: 'PTSansRegular',
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 20,
+                                              height: 10,
+                                              child: Transform.scale(
+                                                scale: 1.2,
+                                                child: Checkbox(
+                                                    activeColor: Color.fromARGB(
+                                                        255, 61, 134, 194),
+                                                    shape: CircleBorder(),
+                                                    tristate: false,
+                                                    value: true,
+                                                    splashRadius: 30,
+                                                    onChanged: (Null) {}),
+                                              ),
+                                            ),
+                                          ]),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 7),
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        border:
+                                            Border.all(color: Colors.black26),
+                                        borderRadius: BorderRadius.circular(20),
                                       ),
-                                      Container(
-                                        height: 23,
-                                        width: 23,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(50),
-                                            border: Border.all(
-                                                color: Colors.black26)),
-                                      )
-                                    ]),
+                                      child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "4. Test",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15,
+                                                fontFamily: 'PTSansRegular',
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 20,
+                                              height: 10,
+                                              child: Transform.scale(
+                                                scale: 1.2,
+                                                child: Checkbox(
+                                                    activeColor: Color.fromARGB(
+                                                        255, 61, 134, 194),
+                                                    shape: CircleBorder(),
+                                                    tristate: false,
+                                                    value: false,
+                                                    splashRadius: 30,
+                                                    onChanged: (Null) {}),
+                                              ),
+                                            ),
+                                          ]),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 7),
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        border:
+                                            Border.all(color: Colors.black26),
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "5. Test",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15,
+                                                fontFamily: 'PTSansRegular',
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 20,
+                                              height: 10,
+                                              child: Transform.scale(
+                                                scale: 1.2,
+                                                child: Checkbox(
+                                                    activeColor: Color.fromARGB(
+                                                        255, 61, 134, 194),
+                                                    shape: CircleBorder(),
+                                                    tristate: false,
+                                                    value: true,
+                                                    splashRadius: 30,
+                                                    onChanged: (Null) {}),
+                                              ),
+                                            ),
+                                          ]),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 7),
+                                      padding: EdgeInsets.all(15),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        border:
+                                            Border.all(color: Colors.black26),
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "6. Test",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 15,
+                                                fontFamily: 'PTSansRegular',
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 20,
+                                              height: 10,
+                                              child: Transform.scale(
+                                                scale: 1.2,
+                                                child: Checkbox(
+                                                    activeColor: Color.fromARGB(
+                                                        255, 61, 134, 194),
+                                                    shape: CircleBorder(),
+                                                    tristate: false,
+                                                    value: false,
+                                                    splashRadius: 30,
+                                                    onChanged: (Null) {}),
+                                              ),
+                                            ),
+                                          ]),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ]),
                           )
