@@ -294,6 +294,34 @@ class _missionListState extends State<missionList>
                                   ],
                                 ),
                               ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.only(top: 10, bottom: 0),
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                      padding:
+                                          MaterialStateProperty.all<EdgeInsets>(
+                                              const EdgeInsets.only(
+                                        left: 100,
+                                        right: 100,
+                                        top: 10,
+                                        bottom: 10,
+                                      )),
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Color.fromARGB(
+                                                  255, 201, 218, 231))),
+                                  onPressed: () {},
+                                  child: const Text(
+                                    'Submit',
+                                    style: TextStyle(
+                                      color: Colors.black54,
+                                      fontSize: 14,
+                                      fontFamily: 'PTSansRegular',
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ]),
                           )
                         ])))
